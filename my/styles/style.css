@@ -1,0 +1,466 @@
+@charset "UTF-8";
+
+header {
+    background-color: #fff;
+    margin-top: 10px;
+    width: 375px;
+    height: 51.71px;
+    text-align: left;
+}
+
+.c-header {
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.c-header__logo {
+  color: #000;
+  min-width: 80px;
+  text-decoration: none;
+}
+
+.c-header__list {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.c-header__list-item {
+  list-style: none;
+  text-decoration: none;
+}
+
+.c-header__list-link {
+  color: #000;
+  display: block;
+  margin-right: 20px;
+  text-decoration: none;
+  padding: 10px 0px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.c-header__list-link:hover {
+  filter: opacity(0.6);
+}
+
+.c-hamburger-menu {
+  position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  .c-hamburger-menu__list {
+    background-color: #fff;
+    opacity: 90%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    padding: 2rem;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    top: 100%;
+    width: 100%;
+  }
+
+  #hamburger:checked ~ .c-hamburger-menu__list {
+    transform: translateX(0%);
+    transition: 0.3s;
+  }
+}
+
+.c-hamburger-menu__input {
+  display: none;
+}
+
+.c-hamburger-menu__bg {
+  background-color: #000;
+  cursor: pointer;
+  display: none;
+  height: 100vh;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#hamburger:checked ~ .c-hamburger-menu__bg {
+  display: block;
+}
+
+.c-hamburger-menu__button {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .c-hamburger-menu__button {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+  }
+}
+
+.c-hamburger-menu__button-mark {
+  background-color: #b71b26;
+  display: block;
+  height: 1px;
+  transition: 0.3s;
+  width: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+    transform: translate(2px, 1px) rotate(45deg);
+    transform-origin: 0%;
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg);
+    transform-origin: 0%;
+  }
+}
+
+body {
+    background-color: #fff;
+
+}
+main {
+    text-align: center;
+}
+
+h1 {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 28px;
+  letter-spacing: 10%;
+  padding-top: 16px;
+  margin-bottom: 8px;
+}
+
+
+h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
+  color: #333333;
+  font-weight: medium 20;
+  line-height: 20px;
+  letter-spacing: 10%;
+  margin: 8px;
+}
+
+footer {
+    font-family: "Noto Serif JP", serif;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #333333;
+    padding: 12px 10px;
+    margin-top: 126px;
+}
+
+.Circle {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Noto Serif JP", serif;
+    color: #fff;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 52%;
+    background: #333;
+    line-height: 36px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    margin: 16px 7px 16px 14px ;
+}
+.circleA {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Noto Serif JP", serif;
+    color: #fff;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 52%;
+    background: #b71b26;
+    line-height: 36px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    margin: 16px 7px 16px 14px ;
+}
+.subTitleline {
+    font-family: "Noto Serif JP", serif;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+
+}
+
+
+.subTitleline::before,
+.subTitleline::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: #333;
+}
+
+.subTitleline::before {
+  left: 0;
+}
+
+.subTitleline::after {
+  right: 0;
+}
+
+.subTitle {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    text-align: left;
+    margin: 10px;
+    line-height: 28px;
+    letter-spacing: 10%;
+    text-align: left;
+}
+
+li {
+    display: inline-block;
+}
+
+.moRe {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.headline{
+    padding: .5em .75em;
+    line-height: 125%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .moRe::after {
+    content: "▶︎";
+    color: #333;
+    font-size: 16px;
+   /* margin-left: -0.75em;*/
+   /* margin-right: 1em;*/
+
+  }
+  
+  .conTact {
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 10%;
+  }
+
+  .contactPage {
+    padding: 5px;
+    height: 912px;
+    width: 375px;
+    margin: 0 auto;
+    background-color: rgba(34, 62, 105, 0.1)
+  }
+
+  .conTacta {
+    background-color: #fff;
+    width: 351px;
+    height: 120px;
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 10%;
+    margin-bottom: auto;
+  }
+
+  .conTactl {
+   
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 10%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  textarea {
+    margin: 0 auto;
+    width: 351px;
+    height: 120px;
+    background-color: #fff;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[tppe="tel"],
+  select,
+  textarea {
+    background-color: #fff;
+    width: 351px;
+    height: 30px;
+    margin-top: 8px 12px;
+  }
+
+  input[type="submit"] {
+    color: #fff;
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: 10%;
+    height: 48px;
+    width: 200px;
+    background-color: #333;
+    margin: 24px 87.5px 16px;
+  }
+
+
+  .dli-caret-right {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.375em 0.64952em;
+    border-left-color: currentColor;
+    border-right: 0;
+  }
+
+  .fLow span {
+    font-family: "Noto Serif JP", serif;
+    font-size: 12px;
+    letter-spacing: 10%;
+    line-height: 12px;
+    color: #b71b26;
+  }
+
+  .fLow p {
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    padding: 8px;
+    color: #fff;
+    background-color: #333;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 32px;
+    
+  }
+
+  .triAngle {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 16px solid rgba(207,114,122,1);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+  
+  }
+  .triAnglea {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 16px solid rgba(201,92,101,1);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+  
+  }
+  .triAngleb {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 16px solid rgba(195,71,80,1);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+  }
+
+  .triAnglec {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 16px solid rgba(189,49,59,1);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+  }
+  .triAngled {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 16px solid rgba(183,27,38,1);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+  }
+
+  table {
+    width: 375px;
+    margin: 0 auto;
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 10%;
+  }
+
+  .fLow {
+    background-color: #f4f5f7;
+    height: 456px;
+  }
+  
+  .conTact::after {
+    content: "必須";
+    background-color: #b71b26;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 10px;
+    padding: 3px 7px;
+    margin: 0px 5px;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+  
+  }
+
